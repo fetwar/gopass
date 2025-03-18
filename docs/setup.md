@@ -160,8 +160,8 @@ When installing on Ubuntu or Debian you can either download the `deb` package,
 [install manually or build from source](#installing-from-source) or use our APT repository.
 
 ```bash
-$ curl https://packages.gopass.pw/repos/gopass/gopass-archive-keyring.gpg | sudo tee /usr/share/keyrings/gopass-archive-keyring.gpg >/dev/null
-$ cat << EOF | sudo tee /etc/apt/sources.list.d/gopass.sources
+curl https://packages.gopass.pw/repos/gopass/gopass-archive-keyring.gpg | sudo tee /usr/share/keyrings/gopass-archive-keyring.gpg >/dev/null
+cat << EOF | sudo tee /etc/apt/sources.list.d/gopass.sources
 Types: deb
 URIs: https://packages.gopass.pw/repos/gopass
 Suites: stable
@@ -169,8 +169,8 @@ Architectures: all amd64 arm64 armhf
 Components: main
 Signed-By: /usr/share/keyrings/gopass-archive-keyring.gpg
 EOF
-$ sudo apt update
-$ sudo apt install gopass gopass-archive-keyring
+sudo apt update
+sudo apt install gopass gopass-archive-keyring
 ```
 
 Note: We also have an unstable track that sometimes contains pre-release versions. Use `https://packages.gopass.pw/repos/gopass-unstable` if you want to help with early testing.
